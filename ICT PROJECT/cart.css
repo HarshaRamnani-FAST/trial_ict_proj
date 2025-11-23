@@ -1,0 +1,158 @@
+/* cart.css - preserves site theme + navbar/footer matching */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+:root{ --pink: #ff3399; }
+
+body {
+  margin: 0;
+  background-color: #0f0f0f !important;
+  color: #fff !important;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Force black navbar background */
+nav.navbar {
+  background-color: black !important;
+  opacity: 0.95;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Ensure container inherits black, not transparent */
+nav.navbar .container-fluid {
+  background-color: black !important;
+}
+
+/* Navbar brand text */
+.navbar-brand {
+  color: #ff69b4 !important; /* pink */
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Navbar links */
+.nav-link {
+  color: white !important;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+
+/* Hover and active state */
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+  color: #ff69b4 !important;
+}
+
+.cart-icon svg {
+  fill: #fff; /* white default */
+  transition: all 0.3s ease;
+}
+
+.cart-icon:hover svg {
+  fill: #ff69b4; /* pink on hover */
+  transform: scale(1.1);
+}
+/* When the cart link is active */
+.cart-icon.active {
+    color: #ff4da6 !important;      /* makes SVG pink */
+}
+
+/* Make the SVG icon pink */
+.cart-icon.active svg {
+    fill: #ff4da6 !important;
+}
+
+/* Make the badge text pink */
+.cart-icon.active #cart-count {
+    color: #ffffff !important;
+}
+
+/* If your badge background should also turn pink */
+.cart-icon.active #cart-count {
+    background-color: #ff4da6 !important;
+    border-color: #ff4da6 !important;
+}
+
+
+
+/* Cart area */
+#cartArea {
+  background: #171717;
+  color: #fff !important;
+  border-radius: 12px;
+  padding: 18px;
+  min-height: 120px;
+}
+
+/* Cart item */
+.cart-item {
+  display: grid;
+  color: #fff !important;
+  grid-template-columns: 90px 1fr 110px;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+.cart-item:last-child { border-bottom: none; }
+
+.cart-item img { width: 90px; height: 70px; object-fit: cover; border-radius: 8px; }
+
+/* name / price column */
+.item-name { font-weight: 600; }
+.item-price { color: #ddd; }
+
+/* qty controls */
+.qty-controls { display:flex; gap:6px; align-items:center; justify-content:flex-end; }
+.qty-controls button { min-width:34px; height:34px; border-radius:6px; border:none; background:#2a2a2a; color:#fff; cursor:pointer; }
+.qty-controls input { width:44px; text-align:center; background:transparent; border:none; color:#fff; }
+
+/* remove button */
+.remove-btn { background:transparent; border:none; color:#ff6b9a; cursor:pointer; font-weight:600; }
+
+/* Buttons */
+.btn-pink { background-color: var(--pink) !important; color:#fff !important; border:none !important; border-radius:8px !important; }
+.btn-outline-light { border-color:#444 !important; color:#fff !important; background:transparent !important; }
+
+* Footer Section */
+.footer-section {
+  background-color: #111;
+  font-size: 0.95rem;
+}
+
+.row{
+  font-family: 'Playfair Display', serif;
+}
+
+.text-pink {
+  color: #ff3399;
+}
+
+.footer-link {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #ff3399;
+}
+
+.social-icons a {
+  color: #aaa;
+  margin-right: 10px;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff3399;
+}
+
+/* responsive */
+@media (max-width: 700px) {
+  .cart-item { grid-template-columns: 80px 1fr; grid-template-rows: auto auto; }
+  .qty-controls { justify-self: start; grid-column: 2 / 3; }
+}

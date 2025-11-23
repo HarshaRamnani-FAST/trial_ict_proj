@@ -1,0 +1,265 @@
+/* CONTACT SECTION -------------------------------------------- */
+body {
+    background: #000;   /* deep black */
+    color: #fff;        /* default text color */
+}
+.contact-section {
+    background: #000;
+}
+/* Import modern serif font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+/* Force black navbar background */
+nav.navbar {
+  background-color: black !important;
+  opacity: 0.95;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Ensure container inherits black, not transparent */
+nav.navbar .container-fluid {
+  background-color: black !important;
+}
+
+/* Navbar brand text */
+.navbar-brand {
+  color: #ff69b4 !important; /* pink */
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Navbar links */
+.nav-link {
+  color: white !important;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+
+/* Hover and active state */
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+  color: #ff69b4 !important;
+}
+
+.cart-icon svg {
+  fill: #fff; /* white default */
+  transition: all 0.3s ease;
+}
+
+.cart-icon:hover svg {
+  fill: #ff69b4; /* pink on hover */
+  transform: scale(1.1);
+}
+
+
+/* HEADING ANIMATION */
+.title {
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.subtitle {
+    opacity: 0;
+    animation: fadeUp 1.3s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        text-shadow: 0 0 0px #ff3399;
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(0);
+        text-shadow: 0 0 12px #ff3399aa;
+    }
+    100% {
+        opacity: 1;
+        text-shadow: none;
+        color: white;
+    }
+}
+.pink {
+    color: #ff3399 !important;
+}
+.title {
+    color: white;
+}
+.subtitle {
+    color: white !important;
+}
+
+
+
+
+
+/* MAIN SECTION */
+.contact-section {
+    text-align: center;
+    padding: 60px 20px;
+    color: #fff;
+}
+
+.section-heading {
+    color: #ff3399 !important;   /* pink */
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* FIXED — single clean container definition */
+.contact-container {
+    position: relative;
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    gap: 35px;
+    align-items: flex-start;
+}
+
+/* CENTER DIVIDER */
+.contact-container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, #ff3399, transparent);
+    opacity: 0.25;
+}
+
+/* CARDS */
+.contact-form,
+.contact-info {
+    flex: 1;
+    background: #1b1b1b;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0 0 25px rgba(255, 51, 153, 0.25);
+    transition: 0.3s ease;
+}
+
+.contact-form:hover,
+.contact-info:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 35px rgba(255, 51, 153, 0.35);
+}
+
+/* FORM FIELDS */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: #222;
+    color: #fff !important;
+    border: 1px solid #333;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* BUTTON */
+.send-btn {
+    width: 100%;
+    background: #ff3399;
+    color: #fff !important;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: #ff5ab8;
+}
+
+/* RIGHT INFO BOX */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.icon {
+    background: linear-gradient(135deg, #ff3399, #ff5ab8);
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 51, 153, 0.35);
+}
+
+/* MAP BOX */
+.map-box {
+    background: #1b1b1b;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 25px rgba(255, 51, 153, 0.25);
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 0 18px rgba(255, 51, 153, 0.35);
+    transition: 0.3s ease;
+}
+
+.map-box iframe:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 30px rgba(255, 51, 153, 0.55);
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-container::before {
+        display: none;
+    }
+}
+/* Footer Section */
+.footer-section {
+  background-color: #111;
+  font-size: 0.95rem;
+}
+
+.row{
+  font-family: 'Playfair Display', serif;
+}
+
+.text-pink {
+  color: #ff3399;
+}
+
+.footer-link {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #ff3399;
+}
+
+.social-icons a {
+  color: #aaa;
+  margin-right: 10px;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff3399;
+}
+

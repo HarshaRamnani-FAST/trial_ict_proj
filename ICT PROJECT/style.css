@@ -1,0 +1,329 @@
+/* Import modern serif font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+/* Force black navbar background */
+nav.navbar {
+  background-color: black !important;
+  opacity: 0.95;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Ensure container inherits black, not transparent */
+nav.navbar .container-fluid {
+  background-color: black !important;
+}
+
+/* Navbar brand text */
+.navbar-brand {
+  color: #ff69b4 !important; /* pink */
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Navbar links */
+.nav-link {
+  color: white !important;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+
+/* Hover and active state */
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+  color: #ff69b4 !important;
+}
+
+.cart-icon svg {
+  fill: #fff; /* white default */
+  transition: all 0.3s ease;
+}
+
+.cart-icon:hover svg {
+  fill: #ff69b4; /* pink on hover */
+  transform: scale(1.1);
+}
+
+
+/* HERO SECTION */
+.hero-section {
+  height: 100vh;
+  background:
+    linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.55) 40%,
+      rgba(0, 0, 0, 0.35) 70%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    url("Homepage.jpeg") center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px; /* for mobile spacing */
+}
+
+.hero-heading {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUpFade 1.2s ease-out forwards;
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Headline */
+.hero-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+
+  /* Half white, half pink gradient text */
+  background: linear-gradient(to right, #ffffff 50%, #ff69b4 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Highlight (optional pink word styling) */
+.highlight {
+  color: #ec9fc5;
+}
+
+/* Subtext */
+.hero-section p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 2rem;
+  }
+}
+
+/* Buttons (keep your current working ones) */
+.hero-section .btn {
+  padding: 10px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.hero-section .btn.btn-pink {
+  background-color: #ff69b4 !important;
+  color: #ffffff !important;
+  border: none;
+}
+
+.hero-section .btn.btn-pink:hover {
+  background-color: #e056a4 !important;
+}
+
+.hero-section .btn.btn-outline-pink {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid transparent !important;
+}
+
+.hero-section .btn.btn-outline-pink:hover {
+  background-color: #ff69b4 !important;
+  color: #ffffff !important;
+}
+.menu-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* space between text and arrow */
+}
+
+.arrow-icon {
+  transition: transform 0.5s;
+}
+
+.menu-button:hover .arrow-icon {
+  transform: translateX(10px); /* moves arrow slightly on hover */
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2.5rem;
+  }
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
+
+.text-pink {
+  color: #ff007f;
+}
+
+.feature {
+  background: #1a1a1a; /* matches your dark theme */
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid #ff4fa8;
+  box-shadow:
+    0 0 4px #ff4fa8,
+    inset 0 0 4px #ff4fa8;
+  transition: 0.3s ease;
+}
+
+.feature:hover {
+  box-shadow:
+    0 0 15px #ff4fa8,
+    0 0 35px #ff4fa8,
+    inset 0 0 15px #ff4fa8;
+  transform: translateY(-5px);
+}
+
+.text-pink {
+  color: #ff4fa8 !important;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(90deg, #160012 0%, #2b001f 100%);
+}
+
+.cta-section .highlight {
+  color: #ff3399;
+}
+
+.btn-pink {
+  background-color: #ff3399;
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-pink:hover {
+  background-color: #ff66b3;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 51, 153, 0.638);
+  transform: translateY(-2px);
+}
+
+
+.desserts-section {
+  background: #1b1b1b;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color:#ff4fa8;
+  margin-bottom: 3rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.desserts-section {
+  background: #1b1b1b;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff69b4 !important;
+  margin-bottom: 2rem;
+}
+
+/* Smaller, centered images */
+.carousel-img {
+  width: auto;         /* auto width to keep image ratio */
+  max-width: 60%;      /* max 60% of container width */
+  height: auto;        /* auto height to maintain proportion */
+  max-height: 300px;   /* limit height */
+  object-fit: contain; /* maintain full image without cropping */
+  display: block;
+}
+
+/* Center caption below image */
+.carousel-caption {
+  position: static;    /* make caption appear below image */
+  background: none;
+  padding: 0.5rem 0;
+  color: #fff;
+  text-align: center;
+}
+
+.carousel-caption h3 {
+  color: #ff80ab;
+  font-weight: 600;
+}
+
+.carousel-caption p {
+  color: #fff;
+  font-weight: 300;
+  margin: 0;
+}
+
+
+
+
+/* Footer Section */
+.footer-section {
+  background-color: #111;
+  font-size: 0.95rem;
+}
+
+.row{
+  font-family: 'Playfair Display', serif;
+}
+
+.text-pink {
+  color: #ff3399;
+}
+
+.footer-link {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #ff3399;
+}
+
+.social-icons a {
+  color: #aaa;
+  margin-right: 10px;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff3399;
+}
+
+

@@ -1,0 +1,272 @@
+/* ================= FONTS & COLORS ================= */
+body, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Playfair Display', serif;
+}
+
+:root {
+  --pink: #ff3399;
+  --pink-light: #ff69b4;
+  --pink-glow: #ff4fa8;
+  --black: #000000;
+  --text-color: #fff;
+}
+.cart-icon {
+  fill: #fff !important;
+  transition: all 0.3s ease;
+}
+
+.cart-icon:hover {
+  fill: #ff69b4 !important;
+  transform: scale(1.1);
+}
+
+/* ================= ABOUT SECTION ================= */
+.about-section {
+  background: #0f0f0f;
+  color: #fff;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.about-title {
+  color: var(--pink-glow);
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(255, 79, 168, 0.6);
+}
+
+.about-text {
+  color: #e6e6e6;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* ================= REVIEWS BOX ================= */
+.reviews-box {
+  background: #1a1a1a;
+  border: 1px solid var(--pink-glow);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 79, 168, 0.4);
+}
+
+.review-heading {
+  color: var(--pink-glow);
+  margin-bottom: 15px;
+}
+
+.review {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #111;
+  border-radius: 8px;
+  border-left: 3px solid var(--pink-glow);
+}
+
+.review span {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #ff94c7;
+}
+
+/* ================= TIMELINE ================= */
+/* ================= TIMELINE ================= */
+.timeline-heading {
+  color: var(--pink-glow);
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.timeline {
+  position: relative;          /* parent for dots and line */
+  padding-left: 50px;          /* space for line + dots */
+}
+
+/* Glowing connecting line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;                   /* aligns with dot center */
+  top: 0;
+  width: 4px;                  /* thicker line */
+  height: 100%;
+  background: linear-gradient(to bottom, var(--pink-glow), var(--pink-light));
+  z-index: 0;                  /* behind dots */
+  border-radius: 2px;
+}
+
+/* Timeline items */
+.timeline-item {
+  position: relative;           /* needed for dot absolute positioning */
+  margin-bottom: 35px;
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeSlideIn 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i,1));
+}
+
+/* Timeline content box */
+.timeline-content {
+  background: #1a1a1a;
+  padding: 15px 18px;
+  border-radius: 8px;
+  border: 1px solid var(--pink-glow);
+  box-shadow: 0 0 12px rgba(255, 79, 168, 0.35);
+  transition: 0.3s ease;
+  position: relative;          /* content stays above line */
+}
+.timeline-content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255, 79, 168, 0.6);
+}
+
+/* Fade + Slide animation */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Timeline image */
+.timeline-image {
+  width: 90%;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .timeline { padding-left: 30px; }
+  .timeline-image { width: 100%; margin-top: 30px; }
+}
+
+/* ================= FOOTER ================= */
+.footer-section {
+  background-color: #111;
+  font-size: 0.95rem;
+}
+.text-pink { color: var(--pink); }
+.footer-link {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-link:hover { color: var(--pink); }
+.social-icons a {
+  color: #aaa;
+  margin-right: 10px;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+.social-icons a:hover { color: var(--pink); }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .timeline { padding-left: 15px; }
+  .timeline-image { width: 100%; margin-top: 30px; }
+}
+
+
+/* ---------------- TIMELINE ----------------
+
+.timeline {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 3px;
+    background: #ff4da6;
+    transform: translateX(-50%);
+}
+
+/* TIMELINE ITEMS */
+/* .timeline-item {
+    position: relative;
+    width: 50%;
+    margin-bottom: 80px;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+    padding-right: 60px;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+    padding-left: 60px;
+}
+
+/* DOT ON LINE */
+/* .timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+    background: #ff4da6;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.timeline-item.left::before {
+    right: -9px;
+}
+
+.timeline-item.right::before {
+    left: -9px;
+}
+
+/* TIMELINE CARD */
+/* .timeline-content {
+    background: #111;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 77, 166, 0.25);
+    border: 1px solid rgba(255, 77, 166, 0.3);
+}
+
+.timeline-content .year {
+    color: #ff4da6;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.timeline-content .title {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    color: #ccc;
+    font-size: 16px;
+}  */
+
+/* ---------------- RESPONSIVE ---------------- */
+/* @media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+    }
+
+    .timeline-item.left::before,
+    .timeline-item.right::before {
+        left: 10px;
+    }
+} 
+

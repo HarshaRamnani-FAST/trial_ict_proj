@@ -1,0 +1,118 @@
+/* menu.css - page specific + copied navbar/footer rules to ensure exact match */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+
+/* base */
+:root{
+  --pink: #ff3399;
+}
+body {
+  margin: 0;
+  background-color: #0f0f0f !important;
+  color: #fff !important;
+  font-family: "Poppins", sans-serif;
+}
+
+/* NAVBAR (matched to your other pages) */
+nav.navbar {
+  background-color: black !important;
+  
+  opacity: 0.95 !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  border-bottom: 1px solid #2a2a2a !important;
+}
+nav.navbar .container-fluid { background-color: black !important; }
+.navbar-brand { color: #ff69b4 !important; font-weight: bold; letter-spacing: 1px; font-family: 'Playfair Display', serif; }
+.nav-link { color: white !important; transition: color 0.3s ease; }
+.nav-link:hover, .nav-link:focus, .nav-link.active { color: #ff69b4 !important; }
+
+.cart-icon svg { fill: #fff !important; transition: all 0.3s ease !important; }
+.cart-icon:hover svg { fill: var(--pink) !important; transform: scale(1.1) !important; }
+#cart-count { margin-left: 6px; background: var(--pink) !important; color: #fff !important; }
+
+/* Keep entire title section text centered and white by default */
+.title-section {
+    text-align: center;
+    padding: 60px 20px;
+    color: #fff; /* This makes the subtitle white */
+}
+
+/* Make only the H1 text white */
+.title-section h1 {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Make only the word "Menu" pink */
+.title-section h1 .pink {
+    color: #ff3399;  /* pink */
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* HERO */
+.menu-hero {
+  background: linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4)) ;
+  padding: 60px 0;
+}
+.menu-hero .display-4 { font-family: 'Playfair Display', serif; color:#fff; }
+
+/* Menu cards */
+.menu-card {
+  background: #1b1b1b !important;
+  color: white !important;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.menu-card img { width:100%; height:220px; object-fit:cover; display:block; }
+.menu-card .card-body { padding: 16px; }
+.menu-card .price { color:#fff; font-size:1.05rem; }
+.btn-pink, .btn-pink:focus { background-color: var(--pink) !important; color:#fff !important; border:none !important; border-radius:8px !important; }
+.btn-pink:hover { background-color:#ff66b3 !important; transform: translateY(-2px); }
+
+/* Layout for grid cards */
+#menuGrid { margin-top: 10px; }
+
+/* price + button row */
+.menu-card .card-body .d-flex { gap:10px; }
+
+/* Footer Section */
+.footer-section {
+  background-color: #111;
+  font-size: 0.95rem;
+}
+
+.row{
+  font-family: 'Playfair Display', serif;
+}
+
+.text-pink {
+  color: #ff3399;
+}
+
+.footer-link {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #ff3399;
+}
+
+.social-icons a {
+  color: #aaa;
+  margin-right: 10px;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff3399;
+}
+
